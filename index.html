@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="tr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>FFragman</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				background: #21212f;
+			}
+			header {
+				width: 100%;
+				height: 6pc;
+				background: #23478f;
+				border-bottom-right-radius: 2pc;
+			}
+			.icon {
+				background-image: url('https://ffragman.github.io/ffragman.svg');
+				background-size: 100%;
+				background-repeat: no-repeat;
+				width: 5pc;
+				height: 5rem;
+				transition: 450ms all;
+			}
+			.icon:hover {
+				transition: 450ms all;
+				border: 5px solid #fff;
+				border-radius: 50%;
+			}
+			.icon-container {
+				margin: auto;
+				width: 5pc;
+				padding-top: 0.5pc;
+			}
+			main {
+				margin-top: 3pc;
+				padding-left: 0.5pc;
+				padding-right: 0.5pc;
+				color: #e3e3e3;
+				font-family: openSans;
+			}
+			tspan {
+				letter-spacing: -6px;
+				font-weight: 1000;
+			}
+			.storm tspan:nth-child(1) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 4s;
+			}
+			.storm tspan:nth-child(2) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 4.1s;
+			}
+			.storm tspan:nth-child(3) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 4.2s;
+			}
+			.storm tspan:nth-child(4) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 4.3s;
+			}
+			.storm tspan:nth-child(5) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 4.4s;
+			}
+			.storm tspan:nth-child(6) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 4.5s;
+			}
+			.storm tspan:nth-child(7) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 4.6s;
+			}
+			.storm tspan:nth-child(8) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 4.7s;
+			}
+			@keyframes tspanimate {
+				0% {
+					opacity: 0;
+				}
+				50%,100% {
+					opacity: 1;
+				}
+			}
+			#helloText {
+				animation: visib 0s linear forwards;
+				animation-delay: 7s;
+			}
+			@keyframes visib {
+				0% {
+					opacity: 1;
+				}
+				50%,100% {
+					visibility: hidden;
+				}
+			}
+			.puul tspan:nth-child(1) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 9s;
+			}
+			.puul tspan:nth-child(2) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 9.1s;
+			}
+			.puul tspan:nth-child(3) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 9.2s;
+			}
+			.puul tspan:nth-child(4) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 9.3s;
+			}
+			.puul tspan:nth-child(5) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 9.4s;
+			}
+			.puul tspan:nth-child(6) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 9.5s;
+			}
+			.puul tspan:nth-child(7) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 9.6s;
+			}
+			.puul tspan:nth-child(8) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 9.7s;
+			}
+			.puul tspan:nth-child(9) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 9.8s;
+			}
+			.puul tspan:nth-child(10) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 9.9s;
+			}
+			.puul tspan:nth-child(11) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 10s;
+			}
+			.puul tspan:nth-child(12) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 10.1s;
+			}
+			.puul tspan:nth-child(13) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 10.2s;
+			}
+			.puul tspan:nth-child(14) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 10.3s;
+			}
+			.puul tspan:nth-child(15) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 10.4s;
+			}
+			.puul tspan:nth-child(16) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 10.5s;
+			}
+			.puul tspan:nth-child(17) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 10.6s;
+			}
+			.puul tspan:nth-child(18) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 10.7s;
+			}
+			.puul tspan:nth-child(19) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 10.8s;
+			}
+			.puul tspan:nth-child(20) {
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				animation: tspanimate 400ms linear forwards;
+				animation-delay: 10.9s;
+			}
+			#continueText {
+				animation: visib 0s linear forwards;
+				animation-delay: 13s;
+			}
+			@keyframes visib {
+				0% {
+					opacity: 1;
+				}
+				50%,100% {
+					visibility: hidden;
+				}
+			}
+			svg {
+				width: 150px;
+				height: 100px;
+				animation: scaleWeb 0s forwards;
+				animation-delay: 8s;
+			}
+			@keyframes scaleWeb {
+				0% {
+					opacity: 1;
+				}
+				50%,100% {
+					width: 330px;
+				}
+			}
+			.cnt {
+				margin: auto;
+				width: 150px;
+				animation: scaleTrue 0s forwards;
+				animation-delay: 8s;
+			}
+			@keyframes scaleTrue {
+				0% {
+					opacity: 1;
+				}
+				50%,100% {
+					margin: auto;
+					width: 330px;
+				}
+			}
+			section.kendi-dusen-aglamaz {
+				margin: auto;
+				width: 95%;
+				padding-left: 0.5pc;
+				padding-top: 1pc;
+			}
+			section.kendi-dusen-aglamaz img {
+				border-radius: 25px;
+			}
+		</style>
+		<script>
+			function kendi_dusen_aglamaz() {
+	document.body.innerHTML = '';
+
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", "https://ffragman.github.io/kendi-dusen-aglamaz-yeni-fragman.html", true);
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			var newcontent = xhr.responseText;
+
+			document.write(newcontent);
+		}
+	};
+	xhr.send();
+}
+		</script>
+	</head>
+	<body oncontextmenu="return false">
+		<header>
+			<div class="icon-container">
+				<embed onclick="window.location.href='https://ffragman.github.io';" src="" class="icon">
+			</div>
+		</header>
+		<main>
+			<div class="cnt">
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<g id="helloText">
+						<text class="storm" x="0" y="30" font-size="2rem" fill="#e3e3e3">
+							<tspan>M</tspan>
+							<tspan>e</tspan>
+							<tspan>r</tspan>
+							<tspan>h</tspan>
+							<tspan>a</tspan>
+							<tspan>b</tspan>
+							<tspan>a</tspan>
+							<tspan>!</tspan>
+						</text>
+					</g>
+					<g id="continueText">
+						<text class="puul" x="0" y="30" font-size="2rem" fill="#e3e3e3">
+								<tspan>D</tspan>
+								<tspan>e</tspan>
+								<tspan>v</tspan>
+								<tspan>a</tspan>
+								<tspan>m</tspan>
+								<tspan fill="transparent" style="letter-spacing: -17px">q</tspan>
+								<tspan>E</tspan>
+								<tspan>d</tspan>
+								<tspan>e</tspan>
+								<tspan>b</tspan>
+								<tspan>i</tspan>
+								<tspan>l</tspan>
+								<tspan>i</tspan>
+								<tspan>r</tspan>
+								<tspan>s</tspan>
+								<tspan>i</tspan>
+								<tspan>n</tspan>
+								<tspan>i</tspan>
+								<tspan>z</tspan>
+								<tspan>.</tspan>
+							</text>
+						</g>
+				</svg>
+			</div>
+			<div class="stor">
+			<section class="kendi-dusen-aglamaz">
+				<img onclick="kendi_dusen_aglamaz()" src="https://ffragman.github.io/kendi_dusen_aglamaz_.jpg" width="95%">
+			</section>
+			</div>
+		</main>
+	</body>
+</html>
