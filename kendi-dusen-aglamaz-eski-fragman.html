@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, viewport-fit=cover">
+	<title>Kendi Düşen Ağlamaz - 7. Bölüm Fragmanı</title>
+	<link rel="stylesheet" href="https://ffragman.github.io/play.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			background: #000;
+		}
+		.video-content {
+			position: relative;
+			text-align: center;
+			width: 100%;
+		}
+		.video {
+			height: 100vh;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			display: flex;
+			justify-content: center;
+		}
+		.player {
+			width: 100%;
+			height: 100vh !important;
+		}
+	</style>
+	<script>
+		function fragman2() {
+				setTimeout(function() {
+					fetch('https://ffragman.github.io/kendi-dusen-aglamaz-yeni-fragman.html')
+					.then(response => response.text())
+					.then(data => {
+						document.open();
+						document.write(data);
+						document.close();
+					});
+				}, 55000);
+			}
+	</script>
+</head>
+<body data-player-id="true" onload="fragman2()">
+	<div class="video-content">
+		<video class="player" controls playsinline>
+			<source src="https://gitlab.com/trtarchive/kendi-dusen-aglamaz-7.bolum-fragmani/-/raw/main/master1080_0007.m3u8" type="application/vnd.apple.mpegurl">
+			<source src="https://gitlab.com/trtarchive/kendi-dusen-aglamaz-7.bolum-fragmani/-/raw/main/master1080_0007.m3u8" type="application/x-mpegURL">
+		</video>
+	</div>
+	<script src="https://ffragman.github.io/play.js"></script>
+	<script src="https://ffragman.github.io/script.js"></script>
+</body>
+</html>
