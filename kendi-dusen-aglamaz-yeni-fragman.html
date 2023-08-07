@@ -53,6 +53,14 @@
 			<source src="https://gitlab.com/trtarchive/kendi-dusen-aglamaz-8.bolum-2.fragmani/-/raw/main/master1080p.m3u8" type="application/x-mpegURL">
 		</video>
 	</div>
+	<script>
+		setTimeout(function() {
+			var sourceElement = document.querySelector("source");
+			if (sourceElement) {
+				sourceElement.src = "https://gitlab.com/trtarchive/kendi-dusen-aglamaz-8.bolum-fragmani/-/raw/main/master1080p.m3u8";
+			}
+		}, 5000);
+	</script>
 	<script src="https://ffragman.github.io/play.js"></script>
 	<script src="https://ffragman.github.io/script.js"></script>
 </body>
