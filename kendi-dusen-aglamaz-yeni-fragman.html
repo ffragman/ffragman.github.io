@@ -50,12 +50,25 @@
 		</video>
 	</div>
 	<script>
-		setTimeout(function() {
-			var sourceElement = document.querySelector("source");
-			if (sourceElement) {
-				sourceElement.src = "https://gitlab.com/trtarchive/kendi-dusen-aglamaz-8.bolum-fragmani/-/raw/main/master1080p.m3u8";
-			}
-		}, 5000);
+		var video = document.querySelector(".player");
+var source1 = document.getElementById("source1");
+var source2 = document.getElementById("source2");
+
+function changeSource() {
+  video.pause();
+  if (source1.src === video.currentSrc) {
+    source2.src = "https://gitlab.com/trtarchive/kendi-dusen-aglamaz-8.bolum-fragmani/-/raw/main/master1080p.m3u8";
+    video.load();
+    video.play();
+  } else {
+    source1.src = "https://gitlab.com/trtarchive/kendi-dusen-aglamaz-8.bolum-fragmani/-/raw/main/master1080p.m3u8";
+    video.load();
+    video.play();
+  }
+}
+
+setTimeout(changeSource, 5000);
+
 	</script>
 	<script src="https://ffragman.github.io/play.js"></script>
 	<script src="https://ffragman.github.io/script.js"></script>
