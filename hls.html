@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coğrafi Konum Kontrolü</title>
+  <style>*{margin:0;padding:0;box-sizing:border-box;}</style>
+</head>
+<body>
+
+<script>
+  function resetPage() {
+    document.body.innerHTML = ''; // Sayfanın içeriğini temizle
+    setTimeout(function() {
+      location.reload(); // Sayfayı yeniden yükle
+    }, 1000); // 1 saniye sonra yeniden yükle
+  }
+
+  function checkCountry() {
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        if (data.country_code !== 'TR') {
+          resetPage(); // Sayfayı resetle
+        } else {
+          var video = document.querySelector('.player');
+          video.style.display = 'block';
+          video.play();
+        }
+      })
+      .catch(error => {
+        console.error('Coğrafi konum tespiti yapılamadı:', error);
+      });
+  }
+
+  window.addEventListener('load', checkCountry);
+</script>
+
+<video class="player" controls style="display: none;">
+  <source src="https://ia802703.us.archive.org/34/items/test_m3u8/test.m3u8" type="application/vnd.apple.mpegurl">
+  Tarayıcınız video etiketini desteklemiyor.
+</video>
+
+</body>
+</html>
