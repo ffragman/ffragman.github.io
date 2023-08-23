@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Birleştirilmiş Video Oynatıcı</title>
+</head>
+<body>
+	<video id="videoPlayer" width="100%" controls>
+		<source src="" type="video/mp4">
+	</video>
+
+	<script>
+		const videoPlayer = document.getElementById('videoPlayer');
+		const videoParts = [
+			'./part1.mp4',
+			'./part2.mp4',
+			'./part3.mp4',
+			'./part4.mp4',
+			'./part5.mp4',
+			'./part6.mp4',
+			'./part7.mp4',
+			'./part8.mp4',
+			'./part9.mp4',
+			'./part10.mp4',
+			'./part11.mp4',
+			'./part12.mp4',
+			'./part13.mp4',
+			'./part14.mp4',
+			'./part15.mp4',
+			'./part16.mp4',
+			'./part17.mp4',
+			'./part18.mp4',
+			'./part19.mp4',
+			'./part20.mp4',
+			'./part21.mp4',
+			'./part22.mp4',
+			'./part23.mp4',
+			'./part24.mp4',
+			'./part25.mp4',
+			'./part26.mp4',
+			'./part27.mp4',
+			'./part28.mp4',
+			'./part29.mp4',
+			'./part30.mp4',
+			'./part31.mp4',
+			'./part32.mp4',
+			'./part33.mp4',
+			'./part34.mp4',
+			'./part35.mp4',
+			'./part36.mp4',
+			'./part37.mp4',
+			'./part38.mp4',
+			'./part39.mp4',
+			'./part40.mp4',
+			'./part41.mp4',
+			'./part42.mp4',
+			'./part43.mp4',
+			'./part44.mp4',
+			'./part45.mp4',
+			'./part46.mp4',
+			'./part47.mp4',
+			'./part48.mp4',
+			'./part49.mp4',
+			'./part50.mp4',
+			'./part51.mp4',
+			'./part52.mp4',
+			'./part53.mp4',
+			'./part54.mp4',
+			'./part55.mp4',
+			'./part56.mp4',
+			'./part57.mp4',
+			'./part58.mp4',
+			'./part59.mp4',
+			'./part60.mp4',
+			'./part61.mp4',
+			'./part62.mp4',
+			'./part63.mp4',
+			'./part64.mp4',
+			'./part65.mp4',
+			'./part66.mp4',
+			'./part67.mp4',
+			'./part68.mp4',
+			'./part69.mp4',
+			'./part70.mp4',
+			// Diğer parça dosyaları buraya eklenebilir
+		];
+
+		let combinedBlob;
+
+		function combinePartsAndPlay() {
+			const blobParts = [];
+
+			const fetchPromises = videoParts.map(part => fetch(part).then(response => response.blob()));
+
+			Promise.all(fetchPromises)
+			.then(blobs => {
+				blobs.forEach(blob => blobParts.push(blob));
+				combinedBlob = new Blob(blobParts, {
+					type: 'video/mp4'
+				});
+				videoPlayer.src = URL.createObjectURL(combinedBlob);
+			})
+			.catch(error => {
+				console.error('Hata oluştu:', error);
+			});
+		}
+
+		// Sayfa yüklendiğinde videolar birleştirilip oynatılır
+		window.onload = combinePartsAndPlay;
+	</script>
+</body>
+</html>
